@@ -1,0 +1,41 @@
+<html ng-app="tilesGame">
+<head>
+    <title>Tile Game</title>
+    <!-- AngularJS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <!-- Angular Material styles -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+    <script src="core.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/styling.css">
+</head>
+<body ng-controller="mainCtrl" layout="column" layout-align="center center">
+    <div layout="row" layout-align="center center" class="w-100">
+        <md-card ng-repeat="letter in randomTileLetters track by $index" flex="15" layout-align="center center" class="tile-style" ng-click="clickTile(letter, $index)">
+            <md-card-content>
+                <h1>{{letter}}</h1>
+            </md-card-content>
+        </md-card>
+    </div>
+    <div layout="row" layout-align="center center" class="w-100">
+        <md-card ng-repeat="slot in scoringArray track by $index" flex="15" layout-align="center center" class="tile-style" ng-click="placeTile($index)">
+            <md-card-content>
+                <h1 class="test">{{slot}}</h1>
+            </md-card-content>
+        </md-card>
+    </div>
+    <div layout="row" layout-align="center center" class="button-container">
+        <md-button ng-if="finished" ng-click="done()"class="md-raised dl-button">DONE</md-button>
+        <md-button ng-if="finished" ng-click="init()" class="md-raised">RESET</md-button>
+    </div>
+    <div layout="row" layout-align="center center" class="scoring-container">
+        <h4 ng-if="score" class="score-text">Your score is {{score}}!</h4>
+    </div>
+    <!-- Angular Material requires Angular.js Libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+
+<!-- Angular Material Library -->
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+</body>
+</html>

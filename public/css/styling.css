@@ -1,0 +1,48 @@
+.tile-style {
+    background: #f6f8fa;
+    color: #7ac143;
+    min-height: 115px;
+    text-transform: capitalize;
+}
+
+
+.tile-style:hover {
+    background: #00afda;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background .5s, color .5s;
+    -webkit-transition: background .5s, color .5s;
+}
+
+.dl-button {
+    color: #7ac143 !important;
+    background: #ffffff !important;
+}
+
+.button-container {
+    margin: 20px;
+    min-height: 48px;
+}
+
+.scoring-container {
+    color: #7ac143;
+    min-height: 62px;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.score-text {
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    .scoring-container {
+        min-height: 150px;
+    }
+
+    .score-text {
+        font-size: 24px !important;
+    }
+}

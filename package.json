@@ -1,0 +1,13 @@
+{
+  "name": "Tiles",
+  "version": "0.0.0",
+  "description": "Simple tile letter game.",
+  "main": "server.js",
+  "author": "Kira Pilot",
+  "dependencies": {
+    "body-parser": "~1.5.2",
+    "express": "~4.7.2",
+    "method-override": "~2.1.2",
+    "morgan": "~1.2.2"
+  }
+}

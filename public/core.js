@@ -94,7 +94,7 @@ app.controller("mainCtrl", function($scope) {
   function checkIfDone(completedArray) {
     $scope.unsortedArray = completedArray.filter(x => x);
     let sortedArray = $scope.unsortedArray.slice(0).sort();
-    if (JSON.stringify($scope.unsortedArray) == JSON.stringify(sortedArray) && $scope.unsortedArray.length == 5) {
+    if ($scope.unsortedArray.join('') == sortedArray.join('') && $scope.unsortedArray.length == 5) {
       $scope.finished = true;
     }
   }
